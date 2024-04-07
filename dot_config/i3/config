@@ -2,6 +2,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 exec setxkbmap -layout us -variant altgr-intl
+exec xset -dpms
 
 exec --no-startup-id dunst &
 exec --no-startup-id ~/.screenlayout/workstation.sh
@@ -238,7 +239,6 @@ for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [title="1Password"] floating enable
-for_window [class="fpakman"] floating enable
 for_window [class="Blueman-manager"] floating enable border pixel 1
 for_window [class="Viewnior"] floating enable border pixel 1
 for_window [class="KeePassXC"] floating enable border pixel 1
@@ -319,13 +319,12 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id feh --bg-scale /home/florent/Pictures/wallpaper/bg.png
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
 #exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -corners -0-0 -time 20 -locker blurlock
+exec --no-startup-id xautolock -corners -0-0 -time 10 -locker blurlock
 # exec_always --no-startup-id ff-theme-util
 # exec_always --no-startup-id fix_xcursor
 
