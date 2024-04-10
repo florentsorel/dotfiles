@@ -6,14 +6,14 @@ exec xset -dpms
 
 exec --no-startup-id dunst &
 exec --no-startup-id ~/.screenlayout/workstation.sh
-# exec sleep 2; exec --no-startup-id pkill picom && exec --no-startup-id picom -b --config ~/.config/picom/picom.conf 
+exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
+set $alt Mod1
 
 # Set monitors name
-set $external_primary DP-2
-set $external_secondary DP-0
+set $external_primary DP-0
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -95,10 +95,10 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+$alt+h focus left
+bindsym $mod+$alt+j focus down
+bindsym $mod+$alt+k focus up
+bindsym $mod+$alt+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -180,11 +180,11 @@ workspace $ws2 output $external_primary
 workspace $ws3 output $external_primary
 workspace $ws4 output $external_primary
 workspace $ws5 output $external_primary
-workspace $ws6 output $external_secondary
-workspace $ws7 output $external_secondary
-workspace $ws8 output $external_secondary
-workspace $ws9 output $external_secondary
-workspace $ws10 output $external_secondary
+workspace $ws6 output $external_primary
+workspace $ws7 output $external_primary
+workspace $ws8 output $external_primary
+workspace $ws9 output $external_primary
+workspace $ws10 output $external_primary
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
