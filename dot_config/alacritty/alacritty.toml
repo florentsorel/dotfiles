@@ -13,7 +13,7 @@ style = "Bold"
 
 [font.italic]
 family = "JetBrains Mono NerdFont"
-style = "Italic"
+style = "Regular"
 
 [font.normal]
 family = "JetBrains Mono NerdFont"
