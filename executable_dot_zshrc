@@ -11,6 +11,8 @@ export EDITOR="/usr/bin/nvim"
 export SUDO_EDITOR="/usr/bin/nvim"
 export BROWSER="/usr/bin/google-chrome-stable"
 
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -151,3 +153,7 @@ eval "$(mcfly init zsh)"
 eval "$(starship init zsh)"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
