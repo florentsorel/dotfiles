@@ -1,0 +1,155 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"hyprland/workspaces"
+	],
+	"modules-center": [
+		"hyprland/window"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"disk",
+		"network",
+		"pulseaudio",
+		"clock",
+		"tray",
+		"hyprland/language",
+		"custom/lock",
+		"custom/power"
+	],
+	"hyprland/workspaces": {
+		"on-click": "activate",
+		"on-scroll-up": "hyprctl dispatch workspace e-1",
+		"on-scroll-down": "hyprctl dispatch workspace e+1",
+		"format": "{icon}",
+		"all-outputs": true,
+		"format-icons": {
+			"1": "1",
+			"2": "2",
+			"3": "3",
+			"4": "4",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9",
+			"10": "10",
+			"default": ""
+		}
+	},
+	"hyprland/window": {
+		"icon": true
+	},
+	"tray": {
+		"icon-size": 21,
+		"spacing": 10
+	},
+	"cpu": {
+		"format": " {}%",
+		"on-click": "wezterm start --always-new-process --class btop btop"
+	},
+	"memory": {
+		"format": " {}%",
+		"on-click": "wezterm start --always-new-process --class btop btop"
+	},
+	"disk": {
+		"format": " {percentage_used}%",
+		"unit": "GB",
+		"on-click": "nemo ~"
+	},
+	"network": {
+		"format": "{ifname}",
+		"format-wifi": "{essid} ({signalStrength}%)  ",
+		"format-ethernet": "{ipaddr}/{cidr} 󰈀",
+		"format-disconnected": "",
+		"tooltip-format": "{ifname} via {gwaddr} 󰈀",
+		"tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+		"tooltip-format-ethernet": "{ifname} 󰈀",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50,
+		"on-click": "nm-connection-editor"
+	},
+	"custom/music": {
+		"format": " {}",
+		"escape": true,
+		"interval": 5,
+		"tooltip": false,
+		"exec": "playerctl metadata --format='{{ title }}'",
+		"on-click": "playerctl play-pause",
+		"max-length": 50
+	},
+	"clock": {
+		"timezone": "Europe/Paris",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": " {:%d/%m/%Y}",
+		"format": " {:%H:%M}"
+	},
+	"backlight": {
+		"device": "nvidia_0",
+		"format": "{icon}",
+		"on-scroll-up": "brightnessctl s '+10%'",
+		"on-scroll-down": "brightnessctl s '10%-'",
+		"on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-charging": "󰂄",
+		"format-plugged": "",
+		"format-alt": "{icon}",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"default": [
+				"",
+				"",
+				" "
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"custom/lock": {
+		"tooltip": false,
+		"on-click": "hyprlock &",
+		"format": ""
+	},
+	"custom/power": {
+		"tooltip": false,
+		"on-click": "wlogout &",
+		"format": "⏻"
+	},
+	"hyprland/language": {
+		"format": " {}",
+		"format-en": "en",
+		"format-fa": "fa",
+		"interval": 1,
+		"keyboard-name": "keychron-keychron-q3",
+		"on-click": "hyprctl switchxkblayout keychron-keychron-q3 next"
+	}
+}
