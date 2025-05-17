@@ -1,0 +1,34 @@
+[global]
+font = JetBrainsMono Nerd Font 14
+frame_width = 1
+width = 400
+padding = 16
+horizontal_padding = 16
+gap_size = 16
+corner_radius = 8
+origin = top-right
+offset = (36, 116)
+progress_bar_max_width = 400
+progress_bar_corner_radius = 4
+
+frame_color = "#89b4fa"
+separator_color= frame
+highlight = "#89b4fa"
+
+
+stack_duplicates = false
+
+force_xwayland = true
+
+[urgency_low]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_normal]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+
+[urgency_critical]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+frame_color = "#fab387"
