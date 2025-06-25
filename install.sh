@@ -148,9 +148,9 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $zsh_plugin_path/fast-syntax-highlighting
 	git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $zsh_plugin_path/zsh-autocomplete
 
-	zsh_theme_path=$HOME/.oh-my-zsh/customs/themes
+	zsh_theme_path=$HOME/.oh-my-zsh/custom/themes
 	echo "Installing zsh spaceship theme"
-	git clone https://github.com/spaceship-prompt/spaceship-prompt.git $zsh_theme_path/spaceship-prompt --depth=1
+	git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$zsh_theme_path/spaceship-prompt" --depth=1
 	ln -s "$zsh_theme_path/spaceship-prompt/spaceship.zsh-theme" "$zsh_theme_path/spaceship.zsh-theme"
 else
 	echo "Oh My ZSH is already installed."
