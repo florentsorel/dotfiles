@@ -65,18 +65,20 @@ window#waybar.empty #window {
 
 #cpu {
   color: @yellow;
-  border-radius: 1rem 0px 0px 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #memory {
   color: @peach;
-  border-radius: 0px 0px 0px 0px;
+  border-radius: 1rem 1rem 1rem 1rem;
+  margin-right: 1rem;
 }
 
 #disk {
   color: @sapphire;
-  border-radius: 0px 1rem 1rem 0px;
+  border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
 }
 
@@ -114,8 +116,9 @@ window#waybar.empty #window {
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
   margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #custom-music {
