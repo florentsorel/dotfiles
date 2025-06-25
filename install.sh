@@ -41,6 +41,7 @@ packages=(
 	grim # screenshot utility for wayland
 	hyprlock
 	hyprpaper
+	hyprshell
 	jq
 	lazygit
 	loupe # images viewers
