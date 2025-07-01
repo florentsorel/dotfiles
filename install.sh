@@ -45,6 +45,7 @@ packages=(
 	jq
 	lazygit
 	loupe # images viewers
+	luarocks
 	man
 	nemo
 	neofetch
