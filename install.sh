@@ -31,6 +31,7 @@ packages=(
 	btop
 	catppuccin-gtk-theme-mocha
 	cava
+	clang-format-static-bin
 	eza # ls replacement
 	fd
 	fuzzel
@@ -83,6 +84,9 @@ for pkg in "${packages[@]}"; do
 		yay -S "$pkg" --noconfirm
 	fi
 done
+
+echo "Installing clang-format"
+/usr/bin/archlinux-clang-format set clang-format-20
 
 git_username=$(git config --global user.name)
 git_email=$(git config --global user.email)

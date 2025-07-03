@@ -6,7 +6,7 @@ export TERM=xterm-256color
 export XDG_CONFIG_HOME=$HOME/.config
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$VOLTA_HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$VOLTA_HOME/bin:/opt/clang-format-static:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
